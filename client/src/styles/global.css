@@ -1,0 +1,10 @@
+body{
+    background: url(../img/homepage-bg.jpg);
+    background-size: cover;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.container{
+    width: 70%;
+    height: 500px;
+    margin: 50px auto;
+}
