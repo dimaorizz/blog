@@ -15,16 +15,14 @@ const genCard = (data) => {
     `
 };
 
-class PostsApi{
-    static get(){
-        return fetch('/posts', {method: 'get'}).then(res => res.json());
-    }
+function getPosts(){
+    return fetch('/posts', {method: 'get'}).then(res => res.json());
 }
 
 const findPosts = () => {
     const $output = document.getElementById('posts');
 
-    PostsApi.get().then((res) => {
+    getPosts().then((res) => {
         for(let i = 0; i < res.length; i++){
             $output.innerHTML += genCard(res[i]);
         }

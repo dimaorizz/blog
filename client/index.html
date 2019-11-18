@@ -7,9 +7,32 @@
     <link rel="stylesheet" href="src/styles/reset.css">
     <link rel="stylesheet" href="src/styles/global.css">
     <link rel="stylesheet" href="src/styles/post.css">
+    <link rel="stylesheet" href="src/styles/popup.css">
+    <link rel="stylesheet" href="src/styles/navbar.css">
     <title>MEN-Stack BLOG</title>
 </head>
 <body>
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <div class="popup-header">
+                <h2>Новый пост</h2>
+            </div>
+            <div class="popup-body">
+                <input placeholder="Псевдоним" type="text" class="popup-textbox" id="author">
+                <input placeholder="Название поста" type="text" class="popup-textbox" id = "title">
+                <textarea placeholder="О чём вы хотите рассказать?" name="txt" id="text" cols="30" rows="5" class="popup-textarea"></textarea>
+            </div>
+            <div class="popup-footer">
+                <input type="button" value="Создать" class="popup-btn" id = "createPost">
+            </div>
+        </div>
+    </div>
+
+    <div class="navbar">
+            <button class="addPost" id="addPost">Добавить пост</button>
+    </div>
+
     <div class="container">
         <div class="posts" id="posts">
             
@@ -17,5 +40,6 @@
     </div>
 
     <script src="index.js"></script>
+    <script src="src/js/create-post.js"></script>
 </body>
 </html>

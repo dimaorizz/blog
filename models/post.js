@@ -9,7 +9,10 @@ const PostSchema = new Schema({
         type: Date,
         default: Date.now
     },
-    likes: Number
+    likes: {
+        type: Number,
+        default: 0
+    }
 });
 
 module.exports = mongoose.model('posts', PostSchema)

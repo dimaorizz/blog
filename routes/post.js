@@ -21,6 +21,18 @@ router.get('/', (req, res) => {
     })
 });
 
+router.post('/', (req, res) => {
+    const post = new postModel({author: req.body.author, title: req.body.title, text: req.body.text});
+    post.save((err) => {
+        if(err){
+            console.log(err);
+        }
+        console.log('document saved');
+        res.status(200);
+    })
+    res.status(500);
+});
+
 
 
 module.exports = router;
