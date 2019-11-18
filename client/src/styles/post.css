@@ -44,6 +44,26 @@
     color: #ffffff;
     border-radius: 20px;
 }
+.post-footer{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 15px;
+}
+.post-like{
+    color: #FF3B19;
+    font-size: 1.3em;
+}
+.post-like:hover{
+    cursor: pointer;
+}
+.del{
+    color: #FF3B19;
+    font-size: 1.3em;
+}
+.del:hover{
+    cursor: pointer;
+}
 
 ::-webkit-scrollbar { width: 3px; height: 3px;}
 ::-webkit-scrollbar-button {  background-color: #073C48; height: 0;}

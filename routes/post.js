@@ -33,6 +33,14 @@ router.post('/', (req, res) => {
     res.status(500);
 });
 
+router.delete('/:id', (req, res) => {
+    postModel.remove({_id: req.params.id}, (err) => {
+        if(err){
+            console.log(err);
+        }
+    });
+    res.status(200);
+});
 
 
 module.exports = router;

@@ -4,12 +4,16 @@ const genCard = (data) => {
             <h2 class="post-title">${data.title}</h2>
             <p class="post-text">${data.text}</p>
             <div class="post-details">
-                <p class="post-date">${data.date.slice(0, 10)}</p>
+                <p class="post-date">${new Date(data.date).toLocaleDateString()}</p>
+                <p id = "post-id" class="post-id">ID: ${data._id}</p>
                 <p class="post-author">Author: ${data.author}</p>
                 <div class="post-likes">
-                        <p class="post-likes-amount">${data.likes} Likes</p>
-                        <input class="post-btn-like" type="button" value="Like">
+                        <p class="post-likes-amount">${data.likes}</p>
+                        <i id= "post-like-btn" class="fas fa-heart post-like"></i>
                 </div>
+            </div>
+            <div class = "post-footer">
+                <i onclick="delPost()" id="deletePost" class="fas fa-trash-alt del" data-id =${data._id}></i>
             </div>
         </div>
     `
